@@ -5,32 +5,40 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverSetup {
+	public static WebDriver browserSetup(String s) {
 
-	private static WebDriver driver;
-	//invoke edge browser
-	public static WebDriver invokeEdgeBrowser() {
-		EdgeOptions options = new EdgeOptions();
-		options.addArguments("guest");
-		options.addArguments("--start-maximized");
-		 driver = new EdgeDriver(options);
-		 return driver;
-	}
-	
-	public static WebDriver invokeChromeBrowser() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-	    ChromeOptions options = new ChromeOptions();
-	    options.addArguments("--disable-notifications");
-	    options.addArguments("--start-maximized");
-	     driver = new ChromeDriver(options);
-	    return driver;
-	}
-	
-	
+		if (s.equalsIgnoreCase("chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+			options.addArguments("--disable-notifications");
+//			options.addArguments("--headless");
+			options.addArguments("guest");
 
-	
-	
-	
-	
+			WebDriver driver = new ChromeDriver(options);
+			driver.manage().window().maximize();
+			return driver;
+		} else if (s.equalsIgnoreCase("edge")) {
+
+			EdgeOptions options = new EdgeOptions();
+			options.addArguments("Disable notifications");
+//			options.addArguments("--headless");
+			options.addArguments("guest");
+			WebDriver driver = new EdgeDriver(options);
+			driver.manage().window().maximize();
+			return driver;
+		}
+
+		else {
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+			WebDriver driver = new FirefoxDriver(firefoxOptions);
+			return driver;
+
+		}
+
+	}
+
 }
