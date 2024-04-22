@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ResusableFunctions {
+public class ReusableFunctions {
 	static ExtentSparkReporter htmlReporter;
 	static ExtentReports reports;
 	ExtentTest test;
@@ -29,15 +30,24 @@ public class ResusableFunctions {
 	private WebDriverWait wait;
 	public static Properties properties;
 
-	public ResusableFunctions(WebDriver driver) {
+	public ReusableFunctions(WebDriver driver) {
 		this.driver = driver;
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		properties = FileIO.getProperties();
 
 	}
 
+	public static WebDriver invokeBrowser() {
+		if (properties == null)
+			properties = FileIO.getProperties();
+		String browser_choice = properties.getProperty("browser");
+//		
+
+		return DriverSetup.browserSetup(browser_choice);
+	}
+
 //**********open website*********/
-	public void openWebsite(String url) {
+	public static void openWebsite(String url) {
 		if (properties == null) {
 			properties = FileIO.getProperties();
 		} else {
@@ -97,45 +107,58 @@ public class ResusableFunctions {
 		waitForElementToDisplay(element);
 		return element.isDisplayed();
 	}
-	
+
 	/************** Take screenshot ****************/
 	public static void takeScreenShot(String filepath) {
-		System.out.println("filepath:  "+filepath);
-	    TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
-	    File srcFile = takeScreenShot.getScreenshotAs(OutputType.FILE);
-	    
-	    // Generate a timestamp
-	    String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
-	    
-	    // Append the timestamp to the filename
-	    String fileNameWithTimestamp = "screenshot_" + timestamp + ".png";
-	    
-	    // Construct the destination file path with the unique filename
-	    File destFile = new File(filepath + File.separator + fileNameWithTimestamp);
-	    
-	    try {
-	        FileUtils.copyFile(srcFile, destFile);
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
-	}
-public static ExtentReports report(String string) {
-	htmlReporter = new ExtentSparkReporter("stringssssss");
-	reports = new ExtentReports();
-	reports.attachReporter(htmlReporter);
-	// add environtment variables
-	reports.setSystemInfo("OS", "Windows");
-	reports.setSystemInfo("Browser", "chrome");
-	reports.setSystemInfo("Environment", "QA");
-	reports.setSystemInfo("user", "shebin");
+		System.out.println("filepath:  " + filepath);
+		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
+		File srcFile = takeScreenShot.getScreenshotAs(OutputType.FILE);
 
-	// configuration look
-	htmlReporter.config().setDocumentTitle("Extent Report Demo");
-	htmlReporter.config().setReportName("Test Report");
-	htmlReporter.config().setTheme(Theme.DARK);
-	htmlReporter.config().setTimeStampFormat("EEE,MMM dd, yyyy, hh:mm a '('zzz')'");
-	return reports;
+		// Generate a timestamp
+		String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+
+		// Append the timestamp to the filename
+		String fileNameWithTimestamp = "screenshot_" + timestamp + ".png";
+
+		// Construct the destination file path with the unique filename
+		File destFile = new File(filepath + File.separator + fileNameWithTimestamp);
+
+		try {
+			FileUtils.copyFile(srcFile, destFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static ExtentReports report(String string) {
+		htmlReporter = new ExtentSparkReporter("stringssssss");
+		reports = new ExtentReports();
+		reports.attachReporter(htmlReporter);
+		// add environtment variables
+		reports.setSystemInfo("OS", "Windows");
+		reports.setSystemInfo("Browser", "chrome");
+		reports.setSystemInfo("Environment", "QA");
+		reports.setSystemInfo("user", "shebin");
+
+		// configuration look
+		htmlReporter.config().setDocumentTitle("Extent Report Demo");
+		htmlReporter.config().setReportName("Test Report");
+		htmlReporter.config().setTheme(Theme.DARK);
+		htmlReporter.config().setTimeStampFormat("EEE,MMM dd, yyyy, hh:mm a '('zzz')'");
+		return reports;
+
+	}
+
+	public void clickTwoButton(WebElement element, WebElement element2) {
+		waitForElementToDisplay(element);
+		element.click();
+		waitForElementToDisplay(element2);
+		element2.click();
+	}
 	
-}
+	public void scrollToElement(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
 
 }
