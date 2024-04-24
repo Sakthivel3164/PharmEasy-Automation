@@ -31,7 +31,7 @@ C:.
 |   |   |           |       DriverSetup.java
 |   |   |           |       ExcelHandling.java
 |   |   |           |       FileIO.java
-|   |   |           |       ResusableFunctions.java
+|   |   |           |       ReusableFunctions.java
 |   |   |           |       
 |   |   |           \---PageObject
 |   |   |                   SearchPage.java
@@ -41,6 +41,9 @@ C:.
 |   |           
 |   \---test
 |       +---java
+|       |   +---runner
+|       |   |       TestRunner.java
+|       |   |       
 |       |   \---ust
 |       |       \---PharmEasyAutomationSuite
 |       |           \---Test
@@ -68,7 +71,7 @@ C:.
     |           |       DriverSetup.class
     |           |       ExcelHandling.class
     |           |       FileIO.class
-    |           |       ResusableFunctions.class
+    |           |       ReusableFunctions.class
     |           |       
     |           \---PageObject
     |                   SearchPage.class
@@ -76,6 +79,9 @@ C:.
     \---test-classes
         |   sample.text
         |   
+        +---runner
+        |       TestRunner.class
+        |       
         \---ust
             \---PharmEasyAutomationSuite
                 \---Test
