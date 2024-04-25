@@ -24,7 +24,7 @@ public class DriverSetup {
 		} else if (s.equalsIgnoreCase("edge")) {
 
 			EdgeOptions options = new EdgeOptions();
-			options.addArguments("Disable notifications");
+			options.addArguments("--disable-notifications");
 //			options.addArguments("--headless");
 			options.addArguments("guest");
 			WebDriver driver = new EdgeDriver(options);

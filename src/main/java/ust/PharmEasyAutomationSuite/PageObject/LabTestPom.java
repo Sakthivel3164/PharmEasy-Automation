@@ -8,13 +8,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ust.PharmEasyAutomationSuite.Base.ReusableFunctions;
 
-public class SearchPage {
+public class LabTestPom {
 	
 	WebDriver driver;
 	WebDriverWait wait;
 	ReusableFunctions rf;
 
-	public SearchPage(WebDriver driver,ReusableFunctions rf) {
+	public LabTestPom(WebDriver driver,ReusableFunctions rf) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
