@@ -47,7 +47,7 @@ public class ReusableFunctions {
 	}
 
 //**********open website*********/
-	public static void openWebsite(String url) {
+	public  void openWebsite(String url) {
 		if (properties == null) {
 			properties = FileIO.getProperties();
 		} else {

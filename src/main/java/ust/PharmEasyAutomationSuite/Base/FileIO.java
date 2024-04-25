@@ -9,7 +9,7 @@ public class FileIO {
     public static Properties getProperties() {
         properties = new Properties();
         try {
-            FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/base/Config.properties");
+            FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/config.properties");
             properties.load(fis);
         } catch (Exception e) {
             e.printStackTrace();
