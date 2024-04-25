@@ -32,7 +32,7 @@ public class ReusableFunctions {
 
 	public ReusableFunctions(WebDriver driver) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		properties = FileIO.getProperties();
 
 	}
@@ -57,7 +57,7 @@ public class ReusableFunctions {
 	}
 
 //***************get from  property file **************
-	public String getP(String s) {
+	public String getPropertyValue(String s) {
 		if (properties == null) {
 			properties = FileIO.getProperties();
 		}
