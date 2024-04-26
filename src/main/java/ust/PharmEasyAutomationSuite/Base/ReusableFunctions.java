@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.http.impl.cookie.RFC2109DomainHandler;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -38,7 +39,7 @@ public class ReusableFunctions {
 
 	}
 
-	public static  WebDriver invokeBrowser() {
+	public static WebDriver invokeBrowser() {
 		if (properties == null)
 			properties = FileIO.getProperties();
 		String browser_choice = properties.getProperty("browser");
@@ -48,7 +49,7 @@ public class ReusableFunctions {
 	}
 
 //**********open website*********/
-	public  void openWebsite(String url) {
+	public void openWebsite(String url) {
 		if (properties == null) {
 			properties = FileIO.getProperties();
 		} else {
@@ -156,7 +157,7 @@ public class ReusableFunctions {
 		waitForElementToDisplay(element2);
 		element2.click();
 	}
-	
+
 	public void scrollToElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -164,22 +165,22 @@ public class ReusableFunctions {
 
 	public void takeADelay(int i) {
 		try {
-			Thread.sleep(i*1000);
+			Thread.sleep(i * 1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
+		}
 	}
 
 	public void refresh() {
-driver.navigate().refresh();		
+		driver.navigate().refresh();
 	}
 
 	public void setTextToInputFieldandEnter(WebElement element, String text) {
 		waitForElementToDisplay(element);
 		element.clear();
 		element.sendKeys(text);
-	    element.sendKeys(Keys.ENTER); // Press "Enter" key after sending text
+		element.sendKeys(Keys.ENTER); // Press "Enter" key after sending text
 
 	}
 
