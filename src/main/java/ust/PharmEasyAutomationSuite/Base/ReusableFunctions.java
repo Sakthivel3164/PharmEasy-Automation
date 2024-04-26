@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -168,6 +169,18 @@ public class ReusableFunctions {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
+	}
+
+	public void refresh() {
+driver.navigate().refresh();		
+	}
+
+	public void setTextToInputFieldandEnter(WebElement element, String text) {
+		waitForElementToDisplay(element);
+		element.clear();
+		element.sendKeys(text);
+	    element.sendKeys(Keys.ENTER); // Press "Enter" key after sending text
+
 	}
 
 }

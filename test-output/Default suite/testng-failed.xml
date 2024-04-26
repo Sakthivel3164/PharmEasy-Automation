@@ -6,7 +6,7 @@
       <class name="ust.PharmEasyAutomationSuite.Test.PharmacySearchTest">
         <methods>
           <include name="invokeBrowser"/>
-          <include name="testSearchSuggestions"/>
+          <include name="testEmptySearch"/>
         </methods>
       </class> <!-- ust.PharmEasyAutomationSuite.Test.PharmacySearchTest -->
     </classes>
