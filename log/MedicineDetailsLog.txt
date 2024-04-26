@@ -28,7 +28,7 @@ MRP Displayed: false
 Offer MRP Displayed: false
 Add To Cart Button Displayed: false
 
-Some details not found for Element 7
+Some details not found for Medomol 650mg Strip Of 15 Tablets
 Medicine Details for Medomol 650mg Strip Of 15 Tablets:
 Medicine Image Displayed: true
 Lab Name Displayed: true

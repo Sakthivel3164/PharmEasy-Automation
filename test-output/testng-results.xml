@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-26T23:04:14 IST" name="Default suite" finished-at="2024-04-26T23:05:17 IST" duration-ms="62994">
+  <suite started-at="2024-04-26T23:26:24 IST" name="Default suite" finished-at="2024-04-26T23:27:42 IST" duration-ms="78768">
     <groups>
     </groups>
-    <test started-at="2024-04-26T23:04:14 IST" name="Default test" finished-at="2024-04-26T23:05:17 IST" duration-ms="62994">
+    <test started-at="2024-04-26T23:26:24 IST" name="Default test" finished-at="2024-04-26T23:27:42 IST" duration-ms="78768">
       <class name="ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest">
-        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:04:14 IST" name="invokeBrowser" finished-at="2024-04-26T23:04:26 IST" duration-ms="12320" status="PASS">
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:26:24 IST" name="invokeBrowser" finished-at="2024-04-26T23:26:36 IST" duration-ms="12610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeBrowser -->
-        <test-method signature="validateWebsiteURL()[pri:1, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:04:26 IST" name="validateWebsiteURL" finished-at="2024-04-26T23:04:26 IST" duration-ms="35" status="PASS">
+        <test-method signature="validateWebsiteURL()[pri:1, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:26:36 IST" name="validateWebsiteURL" finished-at="2024-04-26T23:26:36 IST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateWebsiteURL -->
-        <test-method signature="testSearchAndSelectProduct()[pri:2, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:04:26 IST" name="testSearchAndSelectProduct" finished-at="2024-04-26T23:04:33 IST" duration-ms="6244" status="PASS">
+        <test-method signature="testSearchAndSelectProduct()[pri:2, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:26:36 IST" name="testSearchAndSelectProduct" finished-at="2024-04-26T23:26:42 IST" duration-ms="5576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchAndSelectProduct -->
-        <test-method signature="testProducts()[pri:3, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:04:33 IST" name="testProducts" finished-at="2024-04-26T23:05:17 IST" duration-ms="44288" status="PASS">
+        <test-method signature="testProducts()[pri:3, instance:ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest@1040be71]" started-at="2024-04-26T23:26:42 IST" name="testProducts" finished-at="2024-04-26T23:27:42 IST" duration-ms="60454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testProducts -->

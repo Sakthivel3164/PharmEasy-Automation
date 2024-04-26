@@ -42,44 +42,6 @@ public class MedicineDetailsVerificationTest {
     @Test(priority = 3)
     public void testProducts() {
         // Perform a search and verify if the correct results are displayed
-       medPom.allmedDetails();
+       medPom.allMedDetails();
     }
-//
-//    @Test(priority = 3)
-//    public void testSelectMedicineAndVerifyTitle() {
-//        // Select a medicine and verify if the correct medicine details page is opened
-//        // Verify if the selected medicine name matches the expected medicine name
-//        assertEquals(medPom.chooseMed(), medName,
-//                "Selected medicine name does not match the expected name: " + medName);
-//    }
-//
-//    @Test(priority = 4)
-//    public void testVerifyMedicineImage() {
-//        // Verify if the medicine image is displayed
-//        assertTrue(medPom.isMedicineImageDisplayed(), "Medicine image is not displayed");
-//    }
-//
-//    @Test(priority = 5)
-//    public void testVerifyLabName() {
-//        // Verify if the lab name is displayed
-//        assertTrue(medPom.isLabNameDisplayed(), "Lab name is not displayed");
-//    }
-//
-//    @Test(priority = 6)
-//    public void testVerifyMRP() {
-//        // Verify if the MRP is displayed
-//        assertTrue(medPom.isMRPDisplayed(), "MRP is not displayed");
-//    }
-//
-//    @Test(priority = 7)
-//    public void testVerifyOfferMRP() {
-//        // Verify if the offer MRP is displayed
-//        assertTrue(medPom.isOfferMRPDisplayed(), "Offer MRP is not displayed");
-//    }
-//
-//    @Test(priority = 8)
-//    public void testVerifyAddToCartButton() {
-//        // Verify if the Add to Cart button is displayed
-//        assertTrue(medPom.isAddToCartButtonDisplayed(), "Add to Cart button is not displayed");
-//    }
 }
