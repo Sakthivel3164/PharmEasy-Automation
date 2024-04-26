@@ -21,17 +21,22 @@ public class PharmacySearchTest {
 		driver = ReusableFunctions.invokeBrowser();
 		rf = new ReusableFunctions(driver);
 		rf.openWebsite("url");
-		searchPom =new PharmEasySearchPom(driver);
+		searchPom = new PharmEasySearchPom(driver);
 	}
 
 	@Test(priority = 1)
-	public void testWebsiteURL() {
+	public void testWebsiteURLandNavbar() {
 		assertEquals(driver.getCurrentUrl(), rf.getPropertyValue("url"));
 	}
 
 	@Test(priority = 2)
 	public void testSearchOptionIsAvailable() {
 		assertTrue(searchPom.isSearchOptionAvailable(), "Search option is not available");
-
 	}
+
+	@Test(priority = 3)
+	public void testSearchSuggestions() {
+		assertTrue(searchPom.searchSuggestion("Dolo", "Dolo 650mg Strip Of 15 Tablets"));
+	}
+
 }

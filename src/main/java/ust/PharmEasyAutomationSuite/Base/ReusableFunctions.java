@@ -161,4 +161,13 @@ public class ReusableFunctions {
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
+	public void takeADelay(int i) {
+		try {
+			Thread.sleep(i*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	}
+
 }
