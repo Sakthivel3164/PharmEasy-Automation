@@ -85,18 +85,11 @@ public class MedicineDetailPom {
 			boolean isOfferMRPDisplayed = false;
 			boolean isAddToCartButtonDisplayed = false;
 
-			// Check if the image element is present
-			try {
-				isImageDisplayed = isMedicineImageDisplayed();
-			} catch (NoSuchElementException e) {
-				// Handle NoSuchElementException
-				String errorMessage = "Medicine Image Element not found for " + getMedName() + "\n";
-				unavailableElements.add(errorMessage);
-			}
 
 			// Check if other elements are present
 			if (isImageDisplayed) {
 				try {
+					isImageDisplayed = isMedicineImageDisplayed();
 					isLabNameDisplayed = isLabNameDisplayed();
 					isMRPDisplayed = isMRPDisplayed();
 					isOfferMRPDisplayed = isOfferMRPDisplayed();
