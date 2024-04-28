@@ -18,6 +18,13 @@ public class MedicineDetailPom {
 	private final WebDriver driver;
 	private final ReusableFunctions rf;
 
+	// Constructor to initialize WebDriver and ReusableFunctions
+	public MedicineDetailPom(WebDriver driver) {
+		this.driver = driver;
+		this.rf = new ReusableFunctions(driver);
+		PageFactory.initElements(driver, this);
+	}
+
 	// Web elements using @FindBy annotations
 	@FindBy(tagName = "h1")
 	private List<WebElement> medList;
@@ -45,13 +52,6 @@ public class MedicineDetailPom {
 
 	@FindBy(xpath = "//button[contains(text(), 'Add To Cart')]")
 	private WebElement addToCartButton;
-
-	// Constructor to initialize WebDriver and ReusableFunctions
-	public MedicineDetailPom(WebDriver driver) {
-		this.driver = driver;
-		this.rf = new ReusableFunctions(driver);
-		PageFactory.initElements(driver, this);
-	}
 
 	// Method to get the text of the medicine name element
 	private String getMedName() {
@@ -84,7 +84,6 @@ public class MedicineDetailPom {
 			boolean isMRPDisplayed = false;
 			boolean isOfferMRPDisplayed = false;
 			boolean isAddToCartButtonDisplayed = false;
-
 
 			// Check if other elements are present
 			if (isImageDisplayed) {

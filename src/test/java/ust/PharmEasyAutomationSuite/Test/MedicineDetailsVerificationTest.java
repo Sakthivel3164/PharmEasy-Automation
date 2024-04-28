@@ -1,5 +1,6 @@
 package ust.PharmEasyAutomationSuite.Test;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
@@ -41,7 +42,7 @@ public class MedicineDetailsVerificationTest {
     
     @Test(priority = 3)
     public void testProducts() {
-        // Perform a search and verify if the correct results are displayed
-       medPom.allMedDetails();
+        // Perform a search and verify if the  results are displayed
+    	assertTrue(medPom.allMedDetails());
     }
 }
