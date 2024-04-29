@@ -28,14 +28,14 @@ MRP Displayed: false
 Offer MRP Displayed: false
 Add To Cart Button Displayed: false
 
-Medicine Details for Dolomed 650mg Strip Of 10 Tablets:
+Medicine Details for Flexon 650mg Strip Of 15 Tablets:
 Medicine Image Displayed: false
 Lab Name Displayed: false
 MRP Displayed: false
 Offer MRP Displayed: false
 Add To Cart Button Displayed: false
 
-Medicine Details for Flexon 650mg Strip Of 15 Tablets:
+Medicine Details for Dolomed 650mg Strip Of 10 Tablets:
 Medicine Image Displayed: false
 Lab Name Displayed: false
 MRP Displayed: false

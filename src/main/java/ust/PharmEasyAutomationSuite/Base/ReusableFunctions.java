@@ -151,7 +151,7 @@ public class ReusableFunctions {
 
 	}
 
-	public void clickTwoButton(WebElement element, WebElement element2) {
+	public void clickTwoElement(WebElement element, WebElement element2) {
 		waitForElementToDisplay(element);
 		element.click();
 		waitForElementToDisplay(element2);
