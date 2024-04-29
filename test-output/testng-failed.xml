@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ust.PharmEasyAutomationSuite.Test.SortTest">
+      <class name="ust.PharmEasyAutomationSuite.Test.AddToCartTest">
         <methods>
-          <include name="test"/>
-          <include name="invokeBrowser"/>
+          <include name="testRemoveItem"/>
+          <include name="setUp"/>
+          <include name="testWithDifferentQuantity"/>
         </methods>
-      </class> <!-- ust.PharmEasyAutomationSuite.Test.SortTest -->
+      </class> <!-- ust.PharmEasyAutomationSuite.Test.AddToCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

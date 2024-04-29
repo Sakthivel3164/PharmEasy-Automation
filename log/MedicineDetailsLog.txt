@@ -1,0 +1,72 @@
+Details of Unavailable Elements:
+
+Medicine Details for Dolo 650mg Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Dolomed 650mg Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Calpol 650mg Plus Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Pacimol 650mg Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Flexon 650mg Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Dolomed 650mg Strip Of 10 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Medomol 650mg Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Sumo L 650mg Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Leemol 650mg Strip Of 15 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
+Medicine Details for Dolo K 50 Mg Strip Of 10 Tablets:
+Medicine Image Displayed: false
+Lab Name Displayed: false
+MRP Displayed: false
+Offer MRP Displayed: false
+Add To Cart Button Displayed: false
+
