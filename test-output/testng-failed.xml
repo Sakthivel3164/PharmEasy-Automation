@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ust.PharmEasyAutomationSuite.Test.TestLabTest">
+      <class name="ust.PharmEasyAutomationSuite.Test.SortTest">
         <methods>
+          <include name="test"/>
           <include name="invokeBrowser"/>
         </methods>
-      </class> <!-- ust.PharmEasyAutomationSuite.Test.TestLabTest -->
+      </class> <!-- ust.PharmEasyAutomationSuite.Test.SortTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

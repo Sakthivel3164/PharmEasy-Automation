@@ -57,7 +57,7 @@ public class ReusableFunctions {
 	}
 
 //***************get from  property file **************
-	public String getP(String s) {
+	public String getPropertyValue(String s) {
 		if (properties == null) {
 			properties = FileIO.getProperties();
 		}
