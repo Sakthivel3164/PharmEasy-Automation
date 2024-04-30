@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import ust.PharmEasyAutomationSuite.Base.DynamicLocaters;
 import ust.PharmEasyAutomationSuite.Base.ReusableFunctions;
 
-public class AddToCartPom extends DynamicLocaters {
+public class AddToCartPom{
 	WebDriver driver;
 	ReusableFunctions rf;
 
@@ -90,5 +90,10 @@ public class AddToCartPom extends DynamicLocaters {
 		removeQuantity();
 		rf.clickOnElement(headerCartElement);
 		return rf.ReturnGetText(emptyTextCartElement);
+	}
+
+	public CartPagePom cartDetails() {
+		addMed();
+		return new CartPagePom(driver,rf);
 	}
 }

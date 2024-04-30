@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import ust.PharmEasyAutomationSuite.Base.ReusableFunctions;
 import ust.PharmEasyAutomationSuite.PageObject.AddToCartPom;
+import ust.PharmEasyAutomationSuite.PageObject.CartPagePom;
 
 /**
  * Test class to verify Add to Cart functionality.
@@ -17,6 +18,7 @@ public class AddToCartTest {
 	WebDriver driver;
 	ReusableFunctions rf;
 	AddToCartPom addToCartPom;
+	CartPagePom cartPom;
 
 	/**
 	 * Method to set up the test environment.
@@ -81,16 +83,26 @@ public class AddToCartTest {
 		Assert.assertEquals(addToCartPom.addMed(), "5"); // test with quantity 5
 		Assert.assertEquals(addToCartPom.testToastMessage(), "Updated in your cart");
 	}
-	
-	 @Test(priority = 7)
-	    public void testAddToCartButtonsAvailability() {
-	        Assert.assertTrue(addToCartPom.isHeaderAddToCartButtonAvailableAndClickable(), "Header Add to Cart button is not available or clickable");
-	        Assert.assertTrue(addToCartPom.isHeaderAddToCartButtonAvailableAndClickable(), "Body Add to Cart button is not available or clickable");
-	    }
+
+	@Test(priority = 7)
+	public void testAddToCartButtonsAvailability() {
+		Assert.assertTrue(addToCartPom.isHeaderAddToCartButtonAvailableAndClickable(),
+				"Header Add to Cart button is not available or clickable");
+		Assert.assertTrue(addToCartPom.isHeaderAddToCartButtonAvailableAndClickable(),
+				"Body Add to Cart button is not available or clickable");
+	}
+
 	@Test(priority = 8)
-	public void testCartWithEmptyItem()
-	{
-		assertEquals(addToCartPom.HeaderCart(),"0 Items in your Cart");
+	public void testCartWithEmptyItem() {
+		assertEquals(addToCartPom.HeaderCart(), "0 Items in your Cart");
 		driver.navigate().back();
 	}
+
+	@Test(priority = 9)
+	public void testCart()
+	{
+		cartPom=addToCartPom.cartDetails();
+		assertEquals(rf.getPropertyValue("cartUrl"), cartPom.getUrl());
+	}
+
 }
