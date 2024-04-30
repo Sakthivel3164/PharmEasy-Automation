@@ -5,9 +5,9 @@
     <classes>
       <class name="ust.PharmEasyAutomationSuite.Test.AddToCartTest">
         <methods>
-          <include name="testRemoveItem"/>
+          <include name="testCartWithEmptyItem"/>
+          <include name="testAddToCartAndUpdateToast"/>
           <include name="setUp"/>
-          <include name="testWithDifferentQuantity"/>
         </methods>
       </class> <!-- ust.PharmEasyAutomationSuite.Test.AddToCartTest -->
     </classes>

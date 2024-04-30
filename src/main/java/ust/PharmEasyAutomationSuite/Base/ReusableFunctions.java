@@ -110,6 +110,10 @@ public class ReusableFunctions {
 		return element.isDisplayed();
 	}
 
+	public boolean isEnabled(WebElement element) {
+		waitForElementToDisplay(element);
+		return element.isEnabled();
+	}
 	/************** Take screenshot ****************/
 	public static void takeScreenShot(String filepath) {
 		System.out.println("filepath:  " + filepath);
