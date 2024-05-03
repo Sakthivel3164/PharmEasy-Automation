@@ -163,6 +163,11 @@ public class ReusableFunctions {
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
+	public void scrollByPixel(int x, int y) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(" + x + ", " + y + ");", "");
+	}
+
 	public void takeADelay(int i) {
 		try {
 			Thread.sleep(i * 1000);
