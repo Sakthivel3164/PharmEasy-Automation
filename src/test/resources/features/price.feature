@@ -8,7 +8,6 @@ Feature: Verify Price Section on Phareasy Website
     When the user scrolls to the price section
     Then the user should check the price text displayed
     And the user should see the following price range options:
-      | Price Range |
       | Below 99    |
       | 100 - 199   |
       | 200 - 299   |

@@ -33,4 +33,14 @@ public class DynamicLocaters {
 				By.xpath("//div[@class='FilterDrawer_wrapper__DzNlm']/div[3]/label[" + i + "]/span[2]/div"));
 		return element;
 	}
+	
+	public static WebElement filterPrice(WebDriver driver, int i) {
+		WebElement element = driver.findElement(
+				By.xpath("(//div[@class='FilterItem_filterTitle__n7zYh'])[" + i + "]"));
+		return element;
+	}
+	
+	
+	
+	
 }
