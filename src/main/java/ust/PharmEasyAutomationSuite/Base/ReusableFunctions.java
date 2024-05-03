@@ -105,7 +105,7 @@ public class ReusableFunctions {
 		element.clear();
 	}
 
-	public boolean isDisaplayed(WebElement element) {
+	public boolean isDisplayed(WebElement element) {
 		waitForElementToDisplay(element);
 		return element.isDisplayed();
 	}
