@@ -30,11 +30,21 @@ public class HomePagePom {
 	@FindBy(xpath = "//div[@class='c-PJLV c-bXbWpx c-bXbWpx-ilbtusb-css']/div/div[@id='cat-2']")
 	WebElement elderlyCare;
 
+	@FindBy(xpath = "//div[@class='c-PJLV c-bXbWpx c-bXbWpx-ilbtusb-css']/div/div[@id='cat-6']")
+	WebElement skinCare;
+
 	public ElderlyCarePom scrollUp() {
 		rf.scrollToElement(shopByCategories);
 		rf.clickOnElement(elderlyCare);
 		return new ElderlyCarePom(driver, rf);
-		
+
+	}
+
+	public SkinCarePom clickSkinCare() {
+		rf.scrollToElement(shopByCategories);
+		rf.clickOnElement(skinCare);
+		return new SkinCarePom(driver, rf);
+
 	}
 
 }

@@ -48,6 +48,7 @@ public class TestLabTest {
 		assertEquals(driver.getCurrentUrl(), rf.getPropertyValue("labtesturl"));
 	}
 
+
 	/*
 	 * after clicking pincode check whether pincode floating window is opened by
 	 * validating the text, check button displayed and whether pincode input field
