@@ -82,11 +82,11 @@ public class LabTestPom {
 
 //	Enter pincode in pincode input field and click check button
 //	The method returns the text of corresponding location and pincode
-	public String enterPincode() throws InterruptedException {
+	public String enterPincode() {
 		rf.setTextToInputField(pincodeInputField, "560002");
 		rf.clickOnElement(checkButton);
 		rf.waitForElementToDisplay(pincode);
-		Thread.sleep(1000);
+		rf.takeADelay(1);
 		return pincode.getText();
 	}
 

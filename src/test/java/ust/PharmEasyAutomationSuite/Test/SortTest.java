@@ -35,4 +35,37 @@ public class SortTest {
 
 	}
 
+	@Test(priority = 1)
+	public void testIsSortByDropDownDisplayed() {
+		assertTrue(carePom.clickSortBy(), "All dropdown elements are not present");
+	}
+
+	@Test(priority = 2)
+	public void testSortPriceLowToHigh() throws InterruptedException {
+
+//		 clickOnDropdownElements accept index for locating dropdown elements using dynamic xpath
+
+		carePom.clickOnDropdownElements(2);
+		assertTrue(carePom.clickPriceLowToHigh());
+		assertEquals(driver.getCurrentUrl(), rf.getPropertyValue("pricelowtohigh"));
+	}
+
+	@Test(priority = 3)
+	public void testSortPriceHighToLow() throws InterruptedException {
+		testIsSortByDropDownDisplayed();
+		carePom.clickOnDropdownElements(3);
+		assertTrue(carePom.clickPriceHighToLow());
+		assertEquals(driver.getCurrentUrl(), rf.getPropertyValue("pricehightolow"));
+
+	}
+
+	@Test(priority = 4)
+	public void testDiscount() throws InterruptedException {
+		testIsSortByDropDownDisplayed();
+		carePom.clickOnDropdownElements(4);
+		assertTrue(carePom.clickDiscount());
+		assertEquals(driver.getCurrentUrl(), rf.getPropertyValue("pricediscount"));
+
+	}
+
 }

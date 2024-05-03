@@ -2,22 +2,6 @@
 <testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2024-04-29T15:07:46 IST" name="Default suite" finished-at="2024-04-29T15:08:02 IST" duration-ms="15225">
-    <groups>
-    </groups>
-    <test started-at="2024-04-29T15:07:46 IST" name="Default test" finished-at="2024-04-29T15:08:02 IST" duration-ms="15225">
-      <class name="ust.PharmEasyAutomationSuite.Test.SortTest">
-        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:ust.PharmEasyAutomationSuite.Test.SortTest@1573f9fc]" started-at="2024-04-29T15:07:47 IST" name="invokeBrowser" finished-at="2024-04-29T15:07:58 IST" duration-ms="11661" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invokeBrowser -->
-        <test-method signature="test()[pri:0, instance:ust.PharmEasyAutomationSuite.Test.SortTest@1573f9fc]" started-at="2024-04-29T15:07:58 IST" name="test" finished-at="2024-04-29T15:08:02 IST" duration-ms="3474" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- ust.PharmEasyAutomationSuite.Test.SortTest -->
-=======
   <suite started-at="2024-04-29T17:15:09 IST" name="Default suite" finished-at="2024-04-29T17:16:08 IST" duration-ms="58763">
     <groups>
     </groups>
@@ -198,7 +182,6 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           </reporter-output>
         </test-method> <!-- testWithDifferentQuantity -->
       </class> <!-- ust.PharmEasyAutomationSuite.Test.AddToCartTest -->
->>>>>>> 1187cfed325db8f75f8f6ea75cabf9dddc447dd1
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
