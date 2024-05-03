@@ -1,5 +1,8 @@
 package ust.PharmEasyAutomationSuite.PageObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +14,7 @@ import ust.PharmEasyAutomationSuite.Base.ReusableFunctions;
 public class AddToCartPom{
 	WebDriver driver;
 	ReusableFunctions rf;
+	List<String> medDetailList=new ArrayList<String>();//to store the med details
 
 	// WebElements
 	@FindBy(xpath = "//div[@class=\"c-PJLV c-bXbWpx c-bXbWpx-icOztnM-css\"]")
@@ -39,6 +43,10 @@ public class AddToCartPom{
 	WebElement bodyCartElement;
 	@FindBy(xpath = "//span[text()='0 Items in your Cart']")
 	WebElement emptyTextCartElement;
+	@FindBy(xpath = "(//div[@class=\"ProductCard_medicineUnitContentWrapper__8thFe\"])[1]")
+	WebElement medDetailsElement;
+	
+	
 
 	// Constructor
 	public AddToCartPom(WebDriver driver) {
@@ -78,15 +86,16 @@ public class AddToCartPom{
 	}
 
 	public boolean isHeaderAddToCartButtonAvailableAndClickable() {
-		return rf.isDisaplayed(headerCartElement) && rf.isEnabled(headerCartElement);
+		return rf.isDisplayed(headerCartElement) && rf.isEnabled(headerCartElement);
 	}
 
 	public boolean isBodyAddToCartButtonAvailableAndClickable() {
-		addMed();
-		return rf.isDisaplayed(bodyCartElement) && rf.isEnabled(bodyCartElement);
+//		addMed();
+		return rf.isDisplayed(bodyCartElement) && rf.isEnabled(bodyCartElement);
 	}
 
-	public String HeaderCart() {
+	
+	public String headerCart() {
 		removeQuantity();
 		rf.clickOnElement(headerCartElement);
 		return rf.ReturnGetText(emptyTextCartElement);
@@ -94,6 +103,14 @@ public class AddToCartPom{
 
 	public CartPagePom cartDetails() {
 		addMed();
+		rf.takeADelay(1);
+		rf.clickOnElement(headerCartElement);
 		return new CartPagePom(driver,rf);
 	}
+
+	public void storeDetails() {
+		System.out.println(rf.ReturnGetText(medDetailsElement));
+	}
+	
+	
 }
