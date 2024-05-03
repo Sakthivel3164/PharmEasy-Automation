@@ -35,7 +35,11 @@ public class SkinCarePom extends DynamicLocaters {
 	@FindBy(className = "ProductCard_productName__5Z65V")
 	List<WebElement> products;
 
-	public void click() throws MentionedProductCountAndAvailableProductCountNotSameException {
+	public boolean verifyBrandFilter() throws MentionedProductCountAndAvailableProductCountNotSameException {
+		
+		boolean flagBrandName = true;
+		boolean flagProductCount = true;
+		
 		rf.scrollByPixel(0, 500);
 		rf.clickOnElement(brandViewMore);
 		/*
@@ -73,14 +77,19 @@ public class SkinCarePom extends DynamicLocaters {
 			/*
 			 * products is a list which contains all the product names of a brand
 			 * using for each loop we can check if all the products are of same branch
+			 * if brand name not same, throw a custom  BrandNameNotSameException
+			 * handle the exception to know for which branch the error is occured
 			 * 
 			 * 
 			 */
 
 			for (WebElement e : products) {
 				try {
-				if(!brandName.contains(e.getText()))
-					throw new BrandNameNotSameException();
+				if(!e.getText().contains(brandName))
+				{
+					flagBrandName = false;
+					throw new BrandNameNotSameException();					
+				}
 				}
 				catch(BrandNameNotSameException b)
 				{
@@ -88,22 +97,37 @@ public class SkinCarePom extends DynamicLocaters {
 					System.out.println("For "+brandName+", all the listed products are not of the same branch");
 				}
 			}
+			
+			/*
+			 * if brand name not same, throw a custom  BrandNameNotSameException
+			 * handle the exception to know for which branch the error is occured
+			 */
 
 			try {
 			if(productCount!=products.size())
+			{
+				flagProductCount = false;
 				throw new MentionedProductCountAndAvailableProductCountNotSameException();
+			}
 			}
 			catch (MentionedProductCountAndAvailableProductCountNotSameException e) {
 				e.printStackTrace();
-				System.out.println(brandName+" mentioned count and available count are not same");
+				System.out.println(brandName+"'s mentioned count and available count are not same");
+				System.out.println("Expected product count: "+productCount);
+				System.out.println("Actual product count: "+products.size());
 
 			}
-//			again click on view all button and then deselect the selected filter
+			/*
+			 * Again click on view more option to select next brand to check all brands
+			 * Again click on checkbox to de-select to check next brand filter
+			 */
+
 			rf.clickOnElement(brandViewMore);
 			rf.takeADelay(1);
 			rf.clickOnElement(filterBrandCheckBox(driver, i));
 
 		}
+		return flagBrandName == true && flagProductCount == true;
 	}
 
 }

@@ -5,9 +5,8 @@
     <classes>
       <class name="ust.PharmEasyAutomationSuite.Test.FilterTest">
         <methods>
-          <include name="testCartWithEmptyItem"/>
-          <include name="testAddToCartAndUpdateToast"/>
-          <include name="setUp"/>
+          <include name="invokeBrowser"/>
+          <include name="test"/>
         </methods>
       </class> <!-- ust.PharmEasyAutomationSuite.Test.FilterTest -->
     </classes>

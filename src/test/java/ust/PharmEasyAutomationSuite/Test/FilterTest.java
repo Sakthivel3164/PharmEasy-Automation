@@ -1,5 +1,7 @@
 package ust.PharmEasyAutomationSuite.Test;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,9 +27,10 @@ public class FilterTest {
 
 	}
 
-	@Test
+	@Test(priority = 0)
 	public void test() throws MentionedProductCountAndAvailableProductCountNotSameException {
 		carePom = pagePom.clickSkinCare();
-		carePom.click();
+		assertTrue(carePom.verifyBrandFilter());
+
 	}
 }
