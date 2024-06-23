@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -28,7 +29,6 @@ public class AddToCartTest {
 		rf.openWebsite("url");
 		addToCartPom = new AddToCartPom(driver);
 	}
-	
 
 	@Test(priority = 1)
 	public void verifyWebsiteURL() {
@@ -90,7 +90,6 @@ public class AddToCartTest {
 
 	}
 
-	
 	@Test(priority = 10)
 	public void testCartURL() {
 		// Initialize CartPagePom object before accessing its methods
@@ -105,6 +104,12 @@ public class AddToCartTest {
 	public void testDiscountPopup() {
 		// Test the cart URL by verifying the URL of the cart page
 		assertTrue(cartPom.popup());
+	}
+
+//	passing path to screenshot method in reusable function
+	@AfterMethod
+	public void takeScreenshot() {
+		rf.takeScreenShot(System.getProperty("user.dir") + "//screenshot");
 	}
 
 }

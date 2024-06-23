@@ -27,20 +27,26 @@ public class DynamicLocaters {
 				By.xpath("//div[@class='FilterDrawer_wrapper__DzNlm']/div[3]/label[" + i + "]/span[2]/div/span"));
 		return element;
 	}
-	
+
 	public WebElement filterBrandName(WebDriver driver, int i) {
 		WebElement element = driver.findElement(
 				By.xpath("//div[@class='FilterDrawer_wrapper__DzNlm']/div[3]/label[" + i + "]/span[2]/div"));
 		return element;
 	}
-	
+
 	public static WebElement filterPrice(WebDriver driver, int i) {
-		WebElement element = driver.findElement(
-				By.xpath("(//div[@class='FilterItem_filterTitle__n7zYh'])[" + i + "]"));
+		WebElement element = driver.findElement(By.xpath("(//div[@class='FilterItem_filterTitle__n7zYh'])[" + i + "]"));
 		return element;
 	}
-	
-	
-	
-	
+
+	public static WebElement footerLinks(WebDriver driver, String linkText) {
+		WebElement element = driver.findElement(By.linkText(linkText));
+		return element;
+	}
+	public static WebElement footerLinks2(WebDriver driver,int i,int j)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[@class='FooterV2_columns__dvSyQ']/div["+i+"]/div["+j+"]"));
+		return element;
+	}
+
 }

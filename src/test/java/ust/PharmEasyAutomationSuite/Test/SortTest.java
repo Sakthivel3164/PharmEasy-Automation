@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -66,6 +67,12 @@ public class SortTest {
 		assertTrue(carePom.clickDiscount());
 		assertEquals(driver.getCurrentUrl(), rf.getPropertyValue("pricediscount"));
 
+	}
+	
+//	passing path to screenshot method in reusable function
+	@AfterMethod
+	public void takeScreenshot() {
+		rf.takeScreenShot(System.getProperty("user.dir") + "//screenshot");
 	}
 
 }

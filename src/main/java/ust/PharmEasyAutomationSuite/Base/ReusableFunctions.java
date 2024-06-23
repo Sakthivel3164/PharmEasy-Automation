@@ -18,8 +18,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -115,7 +118,7 @@ public class ReusableFunctions {
 		return element.isEnabled();
 	}
 	/************** Take screenshot ****************/
-	public static void takeScreenShot(String filepath) {
+	public  void takeScreenShot(String filepath) {
 		System.out.println("filepath:  " + filepath);
 		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
 		File srcFile = takeScreenShot.getScreenshotAs(OutputType.FILE);
@@ -154,6 +157,36 @@ public class ReusableFunctions {
 		return reports;
 
 	}
+//	public static ExtentReports generateReport( String reportName)
+//	{
+//		htmlReporter = new ExtentSparkReporter(reportName);
+//		reports = new ExtentReports();
+//		reports.attachReporter(htmlReporter);
+//		// add environtment variables
+//		reports.setSystemInfo("OS", "Windows");
+//		reports.setSystemInfo("Browser", "chrome");
+//		reports.setSystemInfo("Environment", "QA");
+//		reports.setSystemInfo("user", "Sakthivel");
+//		// configuration look
+//		htmlReporter.config().setDocumentTitle("Extent Report Demo");
+//		htmlReporter.config().setReportName("Test Report");
+//		htmlReporter.config().setTheme(Theme.DARK);
+//		htmlReporter.config().setTimeStampFormat("EEE,MMM dd, yyyy, hh:mm a '('zzz')'");
+//		return reports;
+//	}
+//	public void getTestResult(ITestResul result,ExtentTest test)
+//	{
+//		if (result.getStatus() == ITestResult.FAILURE) {
+//			test.log(com.aventstack.extentreports.Status.FAIL,
+//					MarkupHelper.createLabel(result.getName() + " FAIL", ExtentColor.RED));
+//		} else if (result.getStatus() == ITestResult.SUCCESS) {
+//			test.log(com.aventstack.extentreports.Status.PASS,
+//					MarkupHelper.createLabel(result.getName() + " PASS", ExtentColor.GREEN));
+//		} else if (result.getStatus() == ITestResult.SKIP) {
+//			test.log(com.aventstack.extentreports.Status.SKIP,
+//					MarkupHelper.createLabel(result.getName() + " SKIP", ExtentColor.YELLOW));
+//		}
+//	}
 
 	public void clickTwoElement(WebElement element, WebElement element2) {
 		waitForElementToDisplay(element);

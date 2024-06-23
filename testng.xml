@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="7" parallel="classes" name="Suite">
+  <test thread-count="7" parallel="classes" name="Test">
+    <classes>
+      <class name="ust.PharmEasyAutomationSuite.Test.AddToCartTest"/>
+      <class name="ust.PharmEasyAutomationSuite.PageObject.AddToCartPom"/>
+      <class name="ust.PharmEasyAutomationSuite.Test.SortTest"/>
+      <class name="ust.PharmEasyAutomationSuite.Test.TestLabTest"/>
+      <class name="ust.PharmEasyAutomationSuite.Test.HeaderTest"/>
+      <class name="ust.PharmEasyAutomationSuite.Test.PharmacySearchTest"/>
+      <class name="stepDefinitions.Hooks"/>
+      <class name="ust.PharmEasyAutomationSuite.Test.FooterLinksTest"/>
+      <class name="ust.PharmEasyAutomationSuite.Test.FilterTest"/>
+      <class name="ust.PharmEasyAutomationSuite.Test.MedicineDetailsVerificationTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

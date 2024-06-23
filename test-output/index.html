@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\268838\AppData\Local\Temp\testng-eclipse--1753088977\testng-customsuite.xml</span>
+                    <span>C:\Users\sakthi\AppData\Local\Temp\testng-eclipse--781434915\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Default_suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,11 +102,11 @@
                     </span>
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Checking Price Section on Phareasy Website&quot;, &quot;Verify Price Section on Phareasy Website&quot;)">runScenario("Checking Price Section on Phareasy Website", "Verify Price Section on Phareasy Website")</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ust.PharmEasyAutomationSuite.Test.FilterTest" class="method navigator-link" hash-for-method="testFilter">testFilter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -120,18 +120,51 @@
         <div panel-name="suite-Default_suite" class="panel Default_suite">
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">runner.TestRunner</span>
+              <img src="failed.png"/>
+              <span class="class-name">ust.PharmEasyAutomationSuite.Test.FilterTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Checking Price Section on Phareasy Website&quot;, &quot;Verify Price Section on Phareasy Website&quot;)">
-                  </a> <!-- runScenario("Checking Price Section on Phareasy Website", "Verify Price Section on Phareasy Website") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Checking Price Section on Phareasy Website","Verify Price Section on Phareasy Website")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
+                  <a name="testFilter">
+                  </a> <!-- testFilter -->
+                  <span class="method-name">testFilter</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at ust.PharmEasyAutomationSuite.Test.FilterTest.testFilter(FilterTest.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -139,7 +172,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\268838\AppData\Local\Temp\testng-eclipse--1753088977\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sakthi\AppData\Local\Temp\testng-eclipse--781434915\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,7 +181,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runner.TestRunner&quot;/&gt;
+      &lt;class name=&quot;ust.PharmEasyAutomationSuite.Test.FilterTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -172,14 +205,6 @@
             <span class="header-content">Groups for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">cucumber</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">runScenario</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_suite" class="panel">
@@ -198,14 +223,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'runner.TestRunner')
-data.setCell(0, 3, 25938);
+data.setCell(0, 1, 'testFilter')
+data.setCell(0, 2, 'ust.PharmEasyAutomationSuite.Test.FilterTest')
+data.setCell(0, 3, 50841);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 50 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -231,19 +256,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runner.TestRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ust.PharmEasyAutomationSuite.Test.FilterTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@22c75c01)</span>
+                <span class="method-name">invokeBrowser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Checking Price Section on Phareasy Website", "Verify Price Section on Phareasy Website")</span>
-                <span class="method-start">187 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testFilter</span>
+                <span class="method-start">6489 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">26130 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot</span>
+                <span class="method-start">57346 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

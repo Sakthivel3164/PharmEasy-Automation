@@ -5,6 +5,7 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -70,6 +71,12 @@ public class PharmacySearchTest {
 		String currentURL = driver.getCurrentUrl();
 		// Assert that the current URL matches the expected URL
 		assertEquals(currentURL, expectedURL, "Current URL does not match the expected URL");
+	}
+	
+//	passing path to screenshot method in reusable function
+	@AfterMethod
+	public void takeScreenshot() {
+		rf.takeScreenShot(System.getProperty("user.dir") + "//screenshot");
 	}
 
 }

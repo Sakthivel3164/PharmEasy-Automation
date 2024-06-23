@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -31,6 +32,7 @@ public class TestLabTest {
 		labTestPom = new LabTestPom(driver, rf);
 
 	}
+	
 
 //	test the home page is opened	
 	@Test(priority = 0)
@@ -103,6 +105,12 @@ public class TestLabTest {
 		assertEquals(cartPom.getNoOfPatients(), "3 patients");
 		assertTrue(cartPom.compareTestPriceAndOrderTotal(), "Test Price not equal");
 
+	}
+	
+//	passing path to screenshot method in reusable function
+	@AfterMethod
+	public void takeScreenshot() {
+		rf.takeScreenShot(System.getProperty("user.dir") + "//screenshot");
 	}
 
 }

@@ -16,7 +16,7 @@ public class PriceValidationPOM {
 	WebDriver driver;
 	ReusableFunctions rf;
 
-	// creating constructer
+	// creating constructor
 	public PriceValidationPOM(WebDriver driver) {
 		this.driver = driver;
 		this.rf = new ReusableFunctions(driver);
