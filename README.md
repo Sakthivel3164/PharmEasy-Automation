@@ -1,6 +1,6 @@
 # PharmEasy-Automation
 
-#(code is in master branch. So switch from main to master)
+# code is in master branch. So switch from main to master
 
 PharmEasy Website Automation Project
 
